@@ -1,6 +1,13 @@
 <p align="center">
-<img width="212" src="https://github.com/EngineersNeedArt/SystemSix/blob/7c597d6baabd1c8c9afefa4abe081f167396a7cb/images/SystemSixLogo.png" alt="SystemSix">
+<img width="212" src="https://github.com/IcingTomato/SystemSix/blob/zh-Hans/documentation/SystemSixLogo.png" alt="SystemSix">
 </p>
+
+SystemSix 现在支持中文（简体/繁体）
+
+<p align="center">
+<img width="212" src="https://github.com/IcingTomato/SystemSix/blob/zh-Hans/documentation/ChineseExample.bmp" alt="ChineseExample">
+</p>
+
 SystemSix is an e-Ink "desk accessory" running on a Raspberry Pi. It is a bit of nostalgia that can function as a calendar, display the weather, the current phase of the moon or just be generally fun to look at.
 
 To be clear, despite how it looks, it is not interactive. It changes every day to display a new "desktop", will update to show local weather, your calendar events, phase of the moon. But you cannot click on it.
@@ -8,7 +15,7 @@ To be clear, despite how it looks, it is not interactive. It changes every day t
 It was wrtitten as a love-letter to my first Macintosh. Hopefully it is nostaglic, somewhat informative, and fun.
 
 <p align="center">
-<img src="https://github.com/EngineersNeedArt/SystemSix/blob/10f2332b5c11dc4a585dd9fe9dbc258d303cf0ba/documentation/DisplaySample.png" alt="SystemSix screenshot.">
+<img src="https://github.com/IcingTomato/SystemSix/blob/zh-Hans/documentation/DisplaySample.png" alt="SystemSix screenshot.">
 </p>
 
 ### Features
@@ -26,7 +33,7 @@ It was wrtitten as a love-letter to my first Macintosh. Hopefully it is nostagli
 • Several different overall layouts and a random selection from over 100 classic icons means you wake up to a surprise desktop every day.
 
 <p align="center">
-<img width="768" src="https://github.com/EngineersNeedArt/SystemSix/blob/cb6224a06ff2554a2e81abf078a4b30b270a5670/documentation/SystemSixDisplayed.jpeg" alt="SystemSix">
+<img width="768" src="https://github.com/IcingTomato/SystemSix/blob/zh-Hans/documentation/SystemSixDisplayed.jpeg" alt="SystemSix">
 </p>
 
 The display is [5.83" e-ink display](https://www.waveshare.com/5.83inch-e-paper.htm) from [Waveshare](https://www.waveshare.com).
