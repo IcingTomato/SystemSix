@@ -5,7 +5,7 @@
 SystemSix 现在支持中文（简体/繁体）
 
 <p align="center">
-<img width="212" src="https://github.com/IcingTomato/SystemSix/blob/zh-Hans/documentation/ChineseExample.bmp" alt="ChineseExample">
+<img width="212" src="https://github.com/IcingTomato/SystemSix/blob/zh-Hans/documentation/ChineseExample.png" alt="ChineseExample">
 </p>
 
 SystemSix is an e-Ink "desk accessory" running on a Raspberry Pi. It is a bit of nostalgia that can function as a calendar, display the weather, the current phase of the moon or just be generally fun to look at.
