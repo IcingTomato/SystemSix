@@ -1,0 +1,16 @@
+# Edit this file to contain your personal settings. Below are just placeholder values.
+LOCALE = "en_US.UTF-8"
+
+#和风天气API
+LAT = 22.6023 #31.7571
+LON = 113.0971 #119.9260
+APIKEY = ''
+LANG = 'zh'
+UNIT = 'm'
+
+# Monday = 1, ... Sunday = 7; None = never show full; other value = random.
+TRASH_DAY = 1
+
+# See README.md on instructions to assign your WebDAV Calendar URL.
+WEBDAV_CALENDAR_URL = "webcal://"
+WEBDAV_IS_APPLE = True

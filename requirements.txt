@@ -1,0 +1,8 @@
+python-dateutil
+icalevents
+lxml
+numpy
+pillow
+requests
+schedule
+vobject
