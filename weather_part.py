@@ -51,17 +51,36 @@ def get_forecast_URL_from_lat_long(latitude: int, longitude: int, apikey: str, l
             air_category = air_data['now']['category']
             air_data = '当前空气质量：{0}，AQI指数：{1}\n'.format(air_category, air_aqi)
             #生活指数
-            life_index_base = 'https://devapi.qweather.com/v7/indices/1d?type=1,3,5,8,9,14&'
+            life_index_base = 'https://devapi.qweather.com/v7/indices/1d?type=1,3,5&'
             life_obs_url = '{0}location={1},{2}&key={3}&lang={4}&unit={5}'.format(life_index_base, longitude, latitude, apikey, lang, unit)
             response = requests.get(life_obs_url)
             if response.status_code == 200:
                 life_data = json.loads(response.content.decode('utf-8'))
-                life_index = '\b'
+                life_index = '\n'
                 for i in life_data['daily']:
                     life_name = i['name']
                     life_category = i['category']
-                    life_index = '{0}{1}：{2}\n'.format(life_index, life_name, life_category)
-        forecast_data = '{0}{1}{2}'.format(forecast_data, air_data, life_index)
+                    life_index = '{0}{1}：{2}  '.format(life_index, life_name, life_category)
+                life2_index_base = 'https://devapi.qweather.com/v7/indices/1d?type=9,14,8&'
+                life2_obs_url = '{0}location={1},{2}&key={3}&lang={4}&unit={5}'.format(life2_index_base, longitude, latitude, apikey, lang, unit)
+                response = requests.get(life2_obs_url)
+                if response.status_code == 200:
+                    life2_data = json.loads(response.content.decode('utf-8'))
+                    life2_index = '\b'
+                    for i in life2_data['daily']:
+                        life2_name = i['name']
+                        life2_category = i['category']
+                        life2_index = '{0}{1}：{2}  '.format(life2_index, life2_name, life2_category)
+            life_index = '{0}\n{1}'.format(life_index, life2_index)
+            hitokoto_base = 'https://v1.hitokoto.cn/?charset=utf-8'
+            response = requests.get(hitokoto_base)
+            if response.status_code == 200:
+                hitokoto_data = json.loads(response.content.decode('utf-8'))
+                hitokoto_now = '\n'
+                hitokoto_hitokoto = hitokoto_data['hitokoto']
+                hitokoto_from = hitokoto_data['from']
+                hitokoto_now = '\n{0}{1}\n —— {2}'.format(hitokoto_now, hitokoto_hitokoto, hitokoto_from)
+        forecast_data = '{0}{1}{2}{3}'.format(forecast_data, air_data, life_index, hitokoto_now)
         if forecast_data:
             logger.info('weather_module.get_forecast_URL_from_lat_long(); returning forecast data.')
             return forecast_data

@@ -145,8 +145,10 @@ def draw_forecast(ink_draw: ImageDraw, origin: Tuple[int, ...], max_origin: Tupl
                 text = text_wrap(text, FONT_GENEVA_9, ink_draw, max_width, 12)
         '''       
         ink_draw.text((origin[0], v_offset), forecast, font=FONT_GENEVA_9, fill=1)
-        #ink_draw.line((origin[0], v_offset + 38, max_origin[0] - 5, v_offset + 38), fill=1, width=1)
-        #ink_draw.line((origin[0], v_offset + 40, max_origin[0] - 5, v_offset + 40), fill=1, width=1)
+        ink_draw.line((origin[0], v_offset + 54, max_origin[0] - 5, v_offset + 54), fill=1, width=1)
+        ink_draw.line((origin[0], v_offset + 56, max_origin[0] - 5, v_offset + 56), fill=1, width=1)
+        ink_draw.line((origin[0], v_offset + 102, max_origin[0] - 5, v_offset + 102), fill=1, width=1)
+        ink_draw.line((origin[0], v_offset + 104, max_origin[0] - 5, v_offset + 104), fill=1, width=1)
         
 
         #v_offset += height_delta
