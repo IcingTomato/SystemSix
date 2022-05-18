@@ -255,7 +255,7 @@ def draw_list_window(ink_draw: ImageDraw, ink_image: Image, origin: Tuple[int, .
 
     # Indicate there are no calendar events.
     if (event_list is None) or (len(event_list) == 0):
-        ink_draw.text((origin[0] + 144, origin[1] + 84), "No calendar events.", font=FONT_GENEVA_9, fill=1)
+        ink_draw.text((origin[0] + 144, origin[1] + 84), "没有待办事项", font=FONT_GENEVA_9, fill=1)
         return
 
     # Iterate over events in list and display them.
